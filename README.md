@@ -5,7 +5,7 @@
     <h1>Hajj & Umrah App</h1>
     <p></p>
     <h2>Documentation</h2>
-    <h3>Notes:</h3>
+    <h3>Important Notes:</h3>
     <h4>1) Penggunaan package flutter_screenutil</h4>
     <p>Fungsi: untuk membuat tampilan adaptive terhadap ukuran device  (lebih detail: <a href="https://pub.dev/packages/flutter_screenutil">dokumentasi</a>)</p>
 <ul>
@@ -24,6 +24,40 @@
     <p>Fungsi: untuk automatisasi kode dependency injection (lebih detail: <a href="https://pub.dev/packages/injectable">dokumentasi</a>)</p>
     <p>Jika ingin menggunakan dependency injection pada sebuah kelas, jalankan perintah ini terlebih dahulu di terminal:</p>
     <code>dart run build_runner watch</code>
+    <h4>3) Daftar atribut widget yang dipanggil secara konstan</h4>
+    <p>*usahakan atribut widget seperti text, style text, dan warna diambil dari class konstan yang sudah diatur.</p>
+    <ul>
+      <li><strong>Text</strong>: diambil dari l10n (core/l10n/) yang penggunaanya menggunakan class Lang (di folder core/util/).<br/>
+        Contoh: <br/>
+        <code>Text(Lang.of(context).helloWorld)</code>
+      </li>
+      <li><strong>Style Text</strong>: diambil dari file core/styles/fonts/app_font.dart.<br/>
+        Contoh: <br/>
+        <code>Text(
+  ...
+  style: AppFont.text16,
+)</code>
+        <p>Bisa juga atur warna dan ketebalan</p>
+           <code>Text(
+  ...
+  style: AppFont.text16.red.bold,
+)</code>
+      </li>
+      <li><strong>Warna</strong>: diambil dari file core/styles/colors/app_color.dart.<br/>
+      Contoh:<br/>
+        <code>
+          Container(
+    color: AppColor.main.primary,
+),
+        </code>
+      </li>
+    </ul>
+    <h4>4) Lainnya</h4>
+     <ul>
+      <li><strong>folder common pada folder ui</strong>: berisi view model dan widget yang dapat digunakan pada lebih dari satu halaman pada scope folder parentnya.</li>
+      <li><strong>SafeArea</strong>: Gunakan widget ini jika ingin membuat halaman atau widget tidak tertimpa status bar device.</li>
+      <li><strong>SizedBox</strong>: Gunakan widget ini jika ingin membuat jarak antara widget(lebih disarankan dibandingkan menggunakan Padding).</li>
+    </ul>
     <hr/>
     <h3>Struktur proyek:</h3>
     <pre>
@@ -132,6 +166,7 @@ lib/
       <li><strong>function</strong> : camelCase, contoh: handleButton()</li>
       <li><strong>images/svgs/icons</strong> : kebab-case, contoh: app-logo.png</li>
     </ul>
+    <hr/>
   </div>
 </body>
 </html>
