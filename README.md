@@ -59,6 +59,7 @@ lib/
 │   └── my_app.dart
 └── main.dart
     </pre>
+    <hr/>
     <h3>Penjelasan struktur proyek:</h3>
     <ul>
   <li><strong>lib/</strong>
@@ -113,13 +114,14 @@ lib/
           <li><strong>admin/</strong>: Menyimpan tampilan untuk admin.</li>
           <li><strong>common/</strong>: Menyimpan tampilan yang dapat digunakan pada seluruh halaman.</li>
           <li><strong>user/</strong>: Menyimpan tampilan untuk user.</li>
-          <li><strong>main.dart</strong>: File utama untuk menjalankan aplikasi Flutter.</li>
+          <li><strong>my_app.dart</strong>: File untuk mengatur pengaturan utama aplikasi (seperti tema, rute, dll.).</li>
         </ul>
       </li>
-      <li><strong>my_app.dart</strong>: File untuk mengatur pengaturan utama aplikasi (seperti tema, rute, dll.).</li>
+      <li><strong>main.dart</strong>: File utama untuk menjalankan aplikasi Flutter.</li>
     </ul>
   </li>
 </ul>
+    <hr/>
     <h3>Aturan penulisan/penamaan:</h3>
     <ul>
       <li><strong>nama route</strong> : kebab-case dan diawali dengan "/", contoh: /admin-home</li>
