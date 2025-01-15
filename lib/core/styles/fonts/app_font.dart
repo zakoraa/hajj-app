@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../di/injector.dart';
-import '../colors/app_color.dart';
+import '../colors/theme_color.dart';
 
 class AppFont {
   const AppFont._();
@@ -65,8 +65,8 @@ extension TextStyleHelpers on TextStyle {
 }
 
 extension TextStyleColors on TextStyle {
-  AppColor get color => getIt<AppColor>();
-  
+  ThemeColor get color => getIt<ThemeColor>();
+
   TextStyle get red => copyWith(color: color.error);
   TextStyle get grey => copyWith(color: color.grey);
   TextStyle get black => copyWith(color: color.black);

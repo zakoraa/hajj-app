@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../../di/injector.dart';
-import '../../colors/app_color.dart';
+import '../../colors/theme_color.dart';
 
 class MainColorScheme {
   const MainColorScheme._();
-  static final color = getIt<AppColorMainTheme>();
+  static final color = getIt<MainThemeColor>();
 
   /// Main color scheme for the app
   static ColorScheme get main => ColorScheme(

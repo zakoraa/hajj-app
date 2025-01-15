@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hajj_umrah_accessories/core/styles/colors/app_color.dart';
+import 'package:hajj_umrah_accessories/core/styles/colors/theme_color.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/styles/themes/modes/app_theme.dart';
@@ -26,14 +26,13 @@ class SettingViewModel extends _$SettingViewModel {
     }
   }
 
-  AppColor getAppColor(AppThemeType type) {
+  MainThemeColor getAppColor(AppThemeType type) {
     switch (type) {
       case AppThemeType.main:
-        return AppColorMainTheme();
+        return MainThemeColor();
     }
   }
 
   ThemeData get activeTheme => getTheme(currentTheme);
-  AppColor get appColor => getAppColor(currentTheme);
-
+  MainThemeColor get appColor => getAppColor(currentTheme);
 }
