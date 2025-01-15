@@ -8,15 +8,16 @@ class AppInputDecorationTheme {
   const AppInputDecorationTheme._();
   static final mainColor = getIt<MainThemeColor>();
 
-  static InputDecorationTheme get main => InputDecorationTheme(
+  static InputDecorationTheme main(BuildContext context) =>
+      InputDecorationTheme(
         errorMaxLines: 3,
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        hintStyle: AppFont.text13.grey,
-        helperStyle: AppFont.text14.grey,
-        errorStyle: AppFont.text10.red,
+        hintStyle: AppFont.text13(context).grey,
+        helperStyle: AppFont.text14(context).grey,
+        errorStyle: AppFont.text10(context).red,
         fillColor: Colors.transparent,
-        labelStyle: AppFont.text14.black,
+        labelStyle: AppFont.text14(context).black,
         filled: true,
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),

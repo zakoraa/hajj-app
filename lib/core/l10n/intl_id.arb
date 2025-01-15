@@ -1,8 +1,9 @@
 {
   "@@locale": "id",
 
-  "home": "Beranda",
-  "helloWorld": "Hallo Dunia!",
+  "chat": "Chat",
+  "call": "Call",
+  "profile": "Profile",
 
   "login": "Masuk",
 

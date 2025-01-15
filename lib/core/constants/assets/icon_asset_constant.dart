@@ -5,4 +5,8 @@ class IconAssetConstant {
   //  TODO: Menambahkan nama icon
   // CONTOH
   //  static const String appIcon = "${basePath}app-icon.svg";
+
+  static const String call = "${basePath}call.svg";
+  static const String chat = "${basePath}chat.svg";
+  static const String profile = "${basePath}profile.svg";
 }

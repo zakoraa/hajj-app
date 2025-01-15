@@ -15,5 +15,5 @@ Future<void> main() async {
   configureDependencies();
   await ScreenUtil.ensureScreenSize();
 
-  runApp(const  ProviderScope(child:MyApp()));
+  runApp(const ProviderScope(child:MyApp()));
 }

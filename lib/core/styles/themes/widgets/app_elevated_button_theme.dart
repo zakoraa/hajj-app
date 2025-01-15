@@ -8,7 +8,8 @@ class AppElevatedButtonTheme {
   const AppElevatedButtonTheme._();
   static final mainColor = getIt<MainThemeColor>();
 
-  static ElevatedButtonThemeData get main => ElevatedButtonThemeData(
+  static ElevatedButtonThemeData main(BuildContext context) =>
+      ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           splashFactory: InkRipple.splashFactory,
           shape: RoundedRectangleBorder(
@@ -17,7 +18,7 @@ class AppElevatedButtonTheme {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           foregroundColor: mainColor.onPrimary,
           elevation: 0.5,
-          textStyle: AppFont.text14.semiBold,
+          textStyle: AppFont.text14(context).semiBold,
           backgroundColor: mainColor.primary,
         ),
       );

@@ -12,7 +12,7 @@ class SettingViewModel extends _$SettingViewModel {
   AppThemeType currentTheme = AppThemeType.main;
 
   @override
-  AppThemeType build() {
+  AppThemeType build({BuildContext? context}) {
     return AppThemeType.main;
   }
 
@@ -20,10 +20,10 @@ class SettingViewModel extends _$SettingViewModel {
     currentTheme = theme;
   }
 
-  ThemeData getTheme(AppThemeType type) {
+  ThemeData getTheme(BuildContext context, AppThemeType type) {
     switch (type) {
       case AppThemeType.main:
-        return AppTheme.mainThemeData;
+        return AppTheme.mainThemeData(context);
     }
   }
 
@@ -34,6 +34,7 @@ class SettingViewModel extends _$SettingViewModel {
     }
   }
 
-  ThemeData get activeTheme => getTheme(currentTheme);
+  ThemeData activeTheme(BuildContext context) =>
+      getTheme(context, currentTheme);
   ThemeColor get appColor => getAppColor(currentTheme);
 }

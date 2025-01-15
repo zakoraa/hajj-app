@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hajj_umrah_accessories/core/styles/colors/app_color.dart';
 
 import '../../../di/injector.dart';
 import '../colors/theme_color.dart';
@@ -9,52 +10,81 @@ class AppFont {
 
   static const double _scale = 1.0;
 
-  static TextStyle get baseText => const TextStyle(
+  static TextStyle baseText(BuildContext context) => TextStyle(
         fontFamily: "Poppins",
+        color: AppColor.textColor(context),
       );
 
-  static TextStyle get text7 => baseText.copyWith(fontSize: 7.sp * _scale);
-  static TextStyle get text8 => baseText.copyWith(fontSize: 8.sp * _scale);
-  static TextStyle get text9 => baseText.copyWith(fontSize: 9.sp * _scale);
-  static TextStyle get text10 => baseText.copyWith(fontSize: 10.sp * _scale);
-  static TextStyle get text11 => baseText.copyWith(fontSize: 11.sp * _scale);
-  static TextStyle get text12 => baseText.copyWith(fontSize: 12.sp * _scale);
-  static TextStyle get text13 => baseText.copyWith(fontSize: 13.sp * _scale);
-  static TextStyle get text14 => baseText.copyWith(fontSize: 14.sp * _scale);
-  static TextStyle get text15 => baseText.copyWith(fontSize: 15.sp * _scale);
-  static TextStyle get text16 => baseText.copyWith(fontSize: 16.sp * _scale);
-  static TextStyle get text17 => baseText.copyWith(fontSize: 17.sp * _scale);
-  static TextStyle get text18 => baseText.copyWith(fontSize: 18.sp * _scale);
-  static TextStyle get text19 => baseText.copyWith(fontSize: 19.sp * _scale);
-  static TextStyle get text20 => baseText.copyWith(fontSize: 20.sp * _scale);
-  static TextStyle get text21 => baseText.copyWith(fontSize: 21.sp * _scale);
-  static TextStyle get text22 => baseText.copyWith(fontSize: 22.sp * _scale);
-  static TextStyle get text23 => baseText.copyWith(fontSize: 23.sp * _scale);
-  static TextStyle get text24 => baseText.copyWith(fontSize: 24.sp * _scale);
-  static TextStyle get text25 => baseText.copyWith(fontSize: 25.sp * _scale);
-  static TextStyle get text26 => baseText.copyWith(fontSize: 26.sp * _scale);
-  static TextStyle get text27 => baseText.copyWith(fontSize: 27.sp * _scale);
-  static TextStyle get text28 => baseText.copyWith(fontSize: 28.sp * _scale);
-  static TextStyle get text29 => baseText.copyWith(fontSize: 29.sp * _scale);
-  static TextStyle get text30 => baseText.copyWith(fontSize: 30.sp * _scale);
-  static TextStyle get text38 => baseText.copyWith(fontSize: 38.sp * _scale);
-  static TextStyle get text40 => baseText.copyWith(fontSize: 40.sp * _scale);
-  static TextStyle get text50 => baseText.copyWith(fontSize: 50.sp * _scale);
-  static TextStyle get text60 => baseText.copyWith(fontSize: 60.sp * _scale);
+  static TextStyle text7(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 7.sp * _scale);
+  static TextStyle text8(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 8.sp * _scale);
+  static TextStyle text9(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 9.sp * _scale);
+  static TextStyle text10(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 10.sp * _scale);
+  static TextStyle text11(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 11.sp * _scale);
+  static TextStyle text12(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 12.sp * _scale);
+  static TextStyle text13(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 13.sp * _scale);
+  static TextStyle text14(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 14.sp * _scale);
+  static TextStyle text15(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 15.sp * _scale);
+  static TextStyle text16(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 16.sp * _scale);
+  static TextStyle text17(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 17.sp * _scale);
+  static TextStyle text18(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 18.sp * _scale);
+  static TextStyle text19(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 19.sp * _scale);
+  static TextStyle text20(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 20.sp * _scale);
+  static TextStyle text21(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 21.sp * _scale);
+  static TextStyle text22(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 22.sp * _scale);
+  static TextStyle text23(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 23.sp * _scale);
+  static TextStyle text24(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 24.sp * _scale);
+  static TextStyle text25(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 25.sp * _scale);
+  static TextStyle text26(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 26.sp * _scale);
+  static TextStyle text27(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 27.sp * _scale);
+  static TextStyle text28(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 28.sp * _scale);
+  static TextStyle text29(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 29.sp * _scale);
+  static TextStyle text30(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 30.sp * _scale);
+  static TextStyle text38(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 38.sp * _scale);
+  static TextStyle text40(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 40.sp * _scale);
+  static TextStyle text50(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 50.sp * _scale);
+  static TextStyle text60(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 60.sp * _scale);
 
-  static TextStyle get button => text14;
+  static TextStyle button(BuildContext context) => text14(context);
 }
 
 extension TextStyleWeightExtension on TextStyle {
   TextStyle get extraThin => copyWith(fontWeight: FontWeight.w100);
   TextStyle get thin => copyWith(fontWeight: FontWeight.w200);
-  TextStyle get light => copyWith(fontWeight: FontWeight.w300); 
-  TextStyle get regular => copyWith(fontWeight: FontWeight.w400); 
-  TextStyle get medium => copyWith(fontWeight: FontWeight.w500); 
-  TextStyle get semiBold => copyWith(fontWeight: FontWeight.w600); 
-  TextStyle get bold => copyWith(fontWeight: FontWeight.w700); 
-  TextStyle get extraBold => copyWith(fontWeight: FontWeight.w800); 
-  TextStyle get ultraBold => copyWith(fontWeight: FontWeight.w900); 
+  TextStyle get light => copyWith(fontWeight: FontWeight.w300);
+  TextStyle get regular => copyWith(fontWeight: FontWeight.w400);
+  TextStyle get medium => copyWith(fontWeight: FontWeight.w500);
+  TextStyle get semiBold => copyWith(fontWeight: FontWeight.w600);
+  TextStyle get bold => copyWith(fontWeight: FontWeight.w700);
+  TextStyle get extraBold => copyWith(fontWeight: FontWeight.w800);
+  TextStyle get ultraBold => copyWith(fontWeight: FontWeight.w900);
 }
 
 extension TextStyleHelpers on TextStyle {
@@ -65,7 +95,7 @@ extension TextStyleHelpers on TextStyle {
 }
 
 extension TextStyleColors on TextStyle {
-  ThemeColor get color => getIt<ThemeColor>();
+  ThemeColor get color => getIt<MainThemeColor>();
 
   TextStyle get red => copyWith(color: color.error);
   TextStyle get grey => copyWith(color: color.grey);

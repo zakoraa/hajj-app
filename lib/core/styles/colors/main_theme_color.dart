@@ -1,6 +1,6 @@
 part of 'theme_color.dart';
 
-@Singleton()
+@singleton
 class MainThemeColor implements ThemeColor {
   // ========= Primary colors
   @override

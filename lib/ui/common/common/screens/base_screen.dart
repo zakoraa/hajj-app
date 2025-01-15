@@ -6,7 +6,8 @@ import '../../../../core/constants/common/margin_constant.dart';
 class BaseScreen extends StatelessWidget {
   final Widget child;
   final bool resizeToAvoidBottomInset;
-  const BaseScreen({super.key, required this.child, this.resizeToAvoidBottomInset = false});
+  final double? horizontalPadding;
+  const BaseScreen({super.key, required this.child, this.resizeToAvoidBottomInset = false, this.horizontalPadding });
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +15,8 @@ class BaseScreen extends StatelessWidget {
       resizeToAvoidBottomInset: resizeToAvoidBottomInset,
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: MarginConstant.horizontalScreen,
+          padding:  EdgeInsets.symmetric(
+            horizontal: horizontalPadding ?? MarginConstant.horizontalScreen,
           ),
           width: 1.sw,
           child: child,

@@ -17,7 +17,7 @@ class AppTheme {
   const AppTheme._();
   static final mainColor = getIt<MainThemeColor>();
 
-  static ThemeData get mainThemeData => ThemeData(
+  static ThemeData mainThemeData(BuildContext context) => ThemeData(
       primaryColor: mainColor.primary,
       scaffoldBackgroundColor: mainColor.surface,
       indicatorColor: mainColor.primary,
@@ -32,12 +32,12 @@ class AppTheme {
       dialogBackgroundColor: mainColor.white,
       unselectedWidgetColor: mainColor.grey,
       appBarTheme: AppAppBarTheme.main,
-      elevatedButtonTheme: AppElevatedButtonTheme.main,
+      elevatedButtonTheme: AppElevatedButtonTheme.main(context),
       progressIndicatorTheme: AppProgressIndicatorTheme.main,
-      textTheme: AppTextTheme.main,
-      textButtonTheme: AppTextButtonTheme.main,
+      textTheme: AppTextTheme.main(context),
+      textButtonTheme: AppTextButtonTheme.main(context),
       textSelectionTheme: AppTextSelectionTheme.main,
-      inputDecorationTheme: AppInputDecorationTheme.main,
+      inputDecorationTheme: AppInputDecorationTheme.main(context),
       splashFactory: InkRipple.splashFactory,
       colorScheme: MainColorScheme.main);
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../view_models/bottom_navbar_view_model.dart';
-import '../../../../core/constants/common/margin_constant.dart';
 
 class TabBarViewWidget extends ConsumerStatefulWidget {
   const TabBarViewWidget({super.key});
@@ -12,7 +11,6 @@ class TabBarViewWidget extends ConsumerStatefulWidget {
 
 class _TabBarViewWidgetState extends ConsumerState<TabBarViewWidget>
     with SingleTickerProviderStateMixin {
-      
   @override
   void initState() {
     super.initState();
@@ -22,6 +20,7 @@ class _TabBarViewWidgetState extends ConsumerState<TabBarViewWidget>
   @override
   Widget build(BuildContext context) {
     final viewModel = ref.watch(bottomNavbarViewModelProvider.notifier);
+    final selectedTabIndex = ref.watch(bottomNavbarViewModelProvider);
     final tabController = viewModel.tabController;
     final tabs = viewModel.tabs;
 
@@ -31,12 +30,7 @@ class _TabBarViewWidgetState extends ConsumerState<TabBarViewWidget>
       controller: tabController,
       children: List.generate(
         tabs.length,
-        (index) => Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: MarginConstant.horizontalScreen,
-          ),
-          child: tabs[viewModel.selectedTabIndex],
-        ),
+        (index) => tabs[selectedTabIndex],
       ),
     );
   }

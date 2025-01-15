@@ -8,10 +8,10 @@ class AppTextButtonTheme {
   const AppTextButtonTheme._();
   static final mainColor = getIt<MainThemeColor>();
 
-  static TextButtonThemeData get main => TextButtonThemeData(
+  static TextButtonThemeData main(BuildContext context) => TextButtonThemeData(
         style: ButtonStyle(
           foregroundColor: WidgetStatePropertyAll(mainColor.primary),
-          textStyle: WidgetStatePropertyAll(AppFont.text16.primary),
+          textStyle: WidgetStatePropertyAll(AppFont.text16(context).primary),
         ),
       );
 }

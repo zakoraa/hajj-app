@@ -14,33 +14,34 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final themeViewModel = ref.watch(settingViewModelProvider.notifier);
-    final themeData = themeViewModel.activeTheme;
-
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          localizationsDelegates: const [
-            AppLocalizations.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate
-          ],
-          builder: (ctx, child) {
-            ScreenUtil.init(ctx);
-            return Theme(
-              data: themeData,
-              child: MainScreen(),
-            );
-          },
-          supportedLocales: L10n.all,
-          locale: Locale(LocaleIdConstant.ID),
+        designSize: const Size(428, 926),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: (_, child) => _buildMaterialApp(context, ref));
+  }
+
+  MaterialApp _buildMaterialApp(BuildContext context, WidgetRef ref) {
+    final themeViewModel =
+        ref.watch(settingViewModelProvider(context: context).notifier);
+    themeData(BuildContext context) => themeViewModel.activeTheme(context);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate
+      ],
+      builder: (ctx, child) {
+        ScreenUtil.init(ctx);
+        return Theme(
+          data: themeData(context),
+          child: MainScreen(),
         );
       },
+      supportedLocales: L10n.all,
+      locale: Locale(LocaleIdConstant.ID),
     );
   }
 }
