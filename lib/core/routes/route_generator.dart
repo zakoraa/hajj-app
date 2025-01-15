@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hajj_umrah_accessories/ui/user/main/screens/main_screen.dart';
 import '../../ui/common/login/screens/login_screen.dart';
-import '../../ui/user/home/screens/home_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
 import 'route_name.dart';
@@ -22,9 +22,9 @@ class RouteGenerator {
           isIos: true,
         );
 
-      case RouteName.home:
+      case RouteName.main:
         return PageTransition(
-          child: const HomeScreen(),
+          child: const MainScreen(),
           type: PageTransitionType.rightToLeft,
           settings: settings,
           duration: const Duration(milliseconds: duration),

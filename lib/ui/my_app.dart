@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hajj_umrah_accessories/ui/user/home/screens/home_screen.dart';
+import 'package:hajj_umrah_accessories/ui/user/main/screens/main_screen.dart';
 
 import '../core/constants/common/locale_id_constant.dart';
 import '../core/l10n/l10n.dart';
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             ScreenUtil.init(ctx);
             return Theme(
               data: ThemeData(),
-              child: HomeScreen(),
+              child: MainScreen(),
             );
           },
           supportedLocales: L10n.all,
