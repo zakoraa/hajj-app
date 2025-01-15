@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../../../di/injector.dart';
 import '../../colors/app_color.dart';
 import '../../fonts/app_font.dart';
 
 class AppInputDecorationTheme {
   const AppInputDecorationTheme._();
+  static final mainColor = getIt<AppColorMainTheme>();
 
   static InputDecorationTheme get main => InputDecorationTheme(
         errorMaxLines: 3,
@@ -18,15 +20,15 @@ class AppInputDecorationTheme {
         filled: true,
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: AppColor.main.error),
+          borderSide: BorderSide(width: 0.8, color: mainColor.error),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: AppColor.main.error),
+          borderSide: BorderSide(width: 0.8, color: mainColor.error),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.3, color: AppColor.main.lightGrey),
+          borderSide: BorderSide(width: 0.3, color: mainColor.lightGrey),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),

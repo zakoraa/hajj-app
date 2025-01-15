@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../di/injector.dart';
 import '../colors/app_color.dart';
 
 class AppFont {
@@ -64,10 +65,12 @@ extension TextStyleHelpers on TextStyle {
 }
 
 extension TextStyleColors on TextStyle {
-  TextStyle get red => copyWith(color: AppColor.main.error);
-  TextStyle get grey => copyWith(color: AppColor.main.grey);
-  TextStyle get black => copyWith(color: AppColor.main.black);
-  TextStyle get white => copyWith(color: AppColor.main.white);
-  TextStyle get primary => copyWith(color: AppColor.main.primary);
+  AppColor get color => getIt<AppColor>();
+  
+  TextStyle get red => copyWith(color: color.error);
+  TextStyle get grey => copyWith(color: color.grey);
+  TextStyle get black => copyWith(color: color.black);
+  TextStyle get white => copyWith(color: color.white);
+  TextStyle get primary => copyWith(color: color.primary);
   // TODO: menginisialisasi warna text
 }
