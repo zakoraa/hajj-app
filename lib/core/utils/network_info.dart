@@ -1,12 +1,11 @@
-import 'package:dartz/dartz.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
-import '../failures/failure.dart';
+import '../failures/exception.dart';
 
 abstract class NetworkInfo {
   Future<bool> get isConnected;
-  Future<Either<Failure, T>> safeNetworkRequest<T>({
-    required Future<Either<Failure, T>> Function() result,
+  Future<T> safeNetworkRequest<T>({
+    required Future<T> Function() result,
   });
 }
 
@@ -21,13 +20,12 @@ class NetworkInfoImpl implements NetworkInfo {
   Future<bool> get isConnected => _internetConnectionChecker.hasConnection;
 
   @override
-  Future<Either<Failure, T>> safeNetworkRequest<T>(
-      {required Future<Either<Failure, T>> Function() result}) async {
+  Future<T> safeNetworkRequest<T>(
+      {required Future<T> Function() result}) async {
     if (await isConnected) {
       return await result();
     } else {
-      return Left(OfflineFailure());
+      throw OfflineException();
     }
   }
 }
-

@@ -64,7 +64,7 @@ extension TextStyleHelpers on TextStyle {
 }
 
 extension TextStyleColors on TextStyle {
-  TextStyle get red => copyWith(color: AppColor.main.errorColor);
+  TextStyle get red => copyWith(color: AppColor.main.error);
   TextStyle get grey => copyWith(color: AppColor.main.grey);
   TextStyle get black => copyWith(color: AppColor.main.black);
   TextStyle get white => copyWith(color: AppColor.main.white);

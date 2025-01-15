@@ -18,11 +18,11 @@ class AppInputDecorationTheme {
         filled: true,
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: AppColor.main.errorColor),
+          borderSide: BorderSide(width: 0.8, color: AppColor.main.error),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: AppColor.main.errorColor),
+          borderSide: BorderSide(width: 0.8, color: AppColor.main.error),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
