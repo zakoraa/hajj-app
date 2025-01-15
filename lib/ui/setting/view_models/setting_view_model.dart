@@ -3,6 +3,7 @@ import 'package:hajj_umrah_accessories/core/styles/colors/theme_color.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../../core/styles/themes/modes/app_theme.dart';
+import '../../../di/injector.dart';
 
 part 'setting_view_model.g.dart';
 
@@ -26,13 +27,13 @@ class SettingViewModel extends _$SettingViewModel {
     }
   }
 
-  MainThemeColor getAppColor(AppThemeType type) {
+  ThemeColor getAppColor(AppThemeType type) {
     switch (type) {
       case AppThemeType.main:
-        return MainThemeColor();
+        return getIt<MainThemeColor>();
     }
   }
 
   ThemeData get activeTheme => getTheme(currentTheme);
-  MainThemeColor get appColor => getAppColor(currentTheme);
+  ThemeColor get appColor => getAppColor(currentTheme);
 }
