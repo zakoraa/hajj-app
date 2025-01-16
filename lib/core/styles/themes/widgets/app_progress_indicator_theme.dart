@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../colors/app_color.dart';
+import '../../../../di/injector.dart';
+import '../../colors/theme_color.dart';
 
 class AppProgressIndicatorTheme {
   const AppProgressIndicatorTheme._();
+  static final mainColor = getIt<MainThemeColor>();
 
   static ProgressIndicatorThemeData get main => ProgressIndicatorThemeData(
-        color: AppColor.main.primary,
-        linearTrackColor: AppColor.main.primary,
-        circularTrackColor: AppColor.main.grey,
+        color: mainColor.primary,
+        linearTrackColor: mainColor.primary,
+        circularTrackColor: mainColor.grey,
       );
 }

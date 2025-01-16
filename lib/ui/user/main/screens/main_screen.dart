@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hajj_umrah_accessories/ui/user/common/screens/base_screen.dart';
+
+import '../../../common/common/screens/base_screen.dart';
+import '../widgets/bottom_navbar.dart';
+import '../widgets/tab_bar_view_widget.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -7,9 +10,13 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const BaseScreen(
-      child: Column(
+      horizontalPadding: 0,
+      child: Stack(
+        fit: StackFit.expand,
+        alignment: Alignment.center,
         children: [
-          Text("HALLO")
+          TabBarViewWidget(),
+          BottomNavbar(),
         ],
       ),
     );

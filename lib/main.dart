@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'di/injector.dart';
@@ -14,5 +15,5 @@ Future<void> main() async {
   configureDependencies();
   await ScreenUtil.ensureScreenSize();
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child:MyApp()));
 }
