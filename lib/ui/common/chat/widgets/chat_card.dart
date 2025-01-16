@@ -3,6 +3,8 @@ import 'package:hajj_umrah_accessories/core/constants/assets/image_asset_constan
 import 'package:hajj_umrah_accessories/core/styles/colors/app_color.dart';
 import 'package:hajj_umrah_accessories/core/styles/fonts/app_font.dart';
 
+import '../../../../core/utils/lang.dart';
+
 class ChatCard extends StatelessWidget {
   final String? profilePicture;
   final String name;
@@ -40,7 +42,7 @@ class ChatCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text("",)
+                      Text(name, style: AppFont.titleMedium(context),)
                     ],
                   ),
                   Row(
