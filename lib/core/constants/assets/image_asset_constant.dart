@@ -8,4 +8,5 @@ class ImageAssetConstant {
 
    static const String defaultProfile = "${basePath}default-profile.jpg";
    static const String announcement = "${basePath}announcement.png";
+   static const String appLogo = "${basePath}app-logo.png";
 }

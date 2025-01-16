@@ -17,13 +17,13 @@ class AppTextTheme {
             headlineLarge: AppFont.text24(context).semiBold,
 
             // titleSmall: Digunakan untuk teks judul kecil, seperti bagian deskripsi singkat atau label item kecil.
-            titleSmall: AppFont.text12(context).bold,
+            titleSmall: AppFont.text14(context).bold,
 
             // titleMedium: Digunakan untuk judul dengan ukuran sedang, misalnya nama elemen atau menu utama.
-            titleMedium: AppFont.text14(context).bold,
+            titleMedium: AppFont.text16(context).bold,
 
             // titleLarge: Untuk judul besar, seperti heading utama atau nama produk/halaman penting.
-            titleLarge: AppFont.text18(context).bold,
+            titleLarge: AppFont.text20(context).bold,
 
             // bodySmall: Untuk teks body kecil, biasanya digunakan untuk catatan atau teks tambahan.
             bodySmall: AppFont.text10(context),

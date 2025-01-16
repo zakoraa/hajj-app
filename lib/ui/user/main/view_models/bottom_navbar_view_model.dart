@@ -26,6 +26,5 @@ class BottomNavbarViewModel extends _$BottomNavbarViewModel {
 
   void selectTab(int index) {
     state = index;
-    tabController.animateTo(state, duration: const Duration(milliseconds: 300));
   }
 }
