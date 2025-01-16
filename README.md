@@ -60,6 +60,7 @@
       <li><strong>folder common pada folder ui</strong>: berisi view model dan widget yang dapat digunakan pada lebih dari satu halaman pada scope folder parentnya.</li>
       <li><strong>SafeArea</strong>: Gunakan widget ini jika ingin membuat halaman atau widget tidak tertimpa status bar device.</li>
       <li><strong>SizedBox</strong>: Gunakan widget ini jika ingin membuat jarak antara widget(lebih disarankan dibandingkan menggunakan Padding).</li>
+      <li><strong>Kode lebih rapih dan mudah dibaca</strong>: Setiap penutup class widget ")" diberi tanda koma ",". Contoh: <code>Container(),</code></li>
     </ul>
     <hr/>
     <h3>Struktur proyek:</h3>
