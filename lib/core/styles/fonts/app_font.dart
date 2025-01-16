@@ -129,6 +129,31 @@ extension TextStyleColors on TextStyle {
   TextStyle get grey => copyWith(color: color.grey);
   TextStyle get black => copyWith(color: color.black);
   TextStyle get white => copyWith(color: color.white);
+ 
+    // Primary colors
   TextStyle get primary => copyWith(color: color.primary);
+  TextStyle get onPrimary => copyWith(color: color.onPrimary);
+  TextStyle get onPrimaryContainer => copyWith(color: color.onPrimaryContainer);
+
+  // Secondary colors
+  TextStyle get secondary => copyWith(color: color.secondary);
+  TextStyle get onSecondary => copyWith(color: color.onSecondary);
+  TextStyle get onSecondaryContainer => copyWith(color: color.onSecondaryContainer);
+
+  // Tertiary colors
+  TextStyle get tertiary => copyWith(color: color.tertiary);
+  TextStyle get onTertiary => copyWith(color: color.onTertiary);
+  TextStyle get onTertiaryContainer => copyWith(color: color.onTertiaryContainer);
+
+  // Surface colors
+  TextStyle get onSurface => copyWith(color: color.onSurface);
+  TextStyle get onInverseSurface => copyWith(color: color.onInverseSurface);
+
+  // Error colors
+  TextStyle get error => copyWith(color: color.error);
+  TextStyle get onError => copyWith(color: color.onError);
+  TextStyle get onErrorContainer => copyWith(color: color.onErrorContainer);
+
+  TextStyle get textGrey => copyWith(color: color.surfaceContainerHigh);
   // TODO: menginisialisasi warna text
 }

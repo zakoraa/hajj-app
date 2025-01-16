@@ -37,7 +37,13 @@ class MyApp extends ConsumerWidget {
         ScreenUtil.init(ctx);
         return Theme(
           data: themeData(context),
-          child: MainScreen(),
+          child: Overlay(
+            initialEntries: [
+              OverlayEntry(
+                builder: (context) => MainScreen(),
+              ),
+            ],
+          ),
         );
       },
       supportedLocales: L10n.all,

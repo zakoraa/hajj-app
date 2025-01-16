@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../di/injector.dart';
 import '../../colors/theme_color.dart';
@@ -11,29 +12,28 @@ class AppInputDecorationTheme {
   static InputDecorationTheme main(BuildContext context) =>
       InputDecorationTheme(
         errorMaxLines: 3,
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-        hintStyle: AppFont.text13(context).grey,
-        helperStyle: AppFont.text14(context).grey,
-        errorStyle: AppFont.text10(context).red,
+        contentPadding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
+        hintStyle: AppFont.bodyMedium(context)?.textGrey,
+        helperStyle: AppFont.bodyMedium(context)?.textGrey,
+        errorStyle: AppFont.bodySmall(context)?.error,
         fillColor: Colors.transparent,
-        labelStyle: AppFont.text14(context).black,
+        labelStyle: AppFont.labelMedium(context)?.black,
         filled: true,
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: mainColor.error),
+          borderRadius: BorderRadius.circular(30.r),
+          borderSide: BorderSide(width: 0.8.w, color: mainColor.error),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.8, color: mainColor.error),
+          borderRadius: BorderRadius.circular(30.r),
+          borderSide: BorderSide(width: 0.8.w, color: mainColor.error),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(width: 0.3, color: mainColor.lightGrey),
+          borderRadius: BorderRadius.circular(30.r),
+          borderSide: BorderSide(width: 0.3.w, color: mainColor.grey),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(width: 0.8, color: Colors.black),
+          borderRadius: BorderRadius.circular(30.r),
+          borderSide: BorderSide(width: 0.8.w, color: Colors.black),
         ),
       );
 }
