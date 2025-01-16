@@ -42,14 +42,17 @@
   ...
   style: AppFont.text16(context).red.bold,
 )</code>
+ <p>atau custom style</p>
+           <code>Text(
+  ...
+  style: AppFont.text16.copyWith(color: Colors.red, fontWeight: FontWeight.w600),
+)</code>
       </li>
       <li><strong>Warna</strong>: diambil dari file core/styles/colors/app_color.dart.<br/>
       Contoh:<br/>
-        <code>
-          Container(
+        <code>Container(
     color: AppColor.primary(context),
-),
-        </code>
+)</code>
       </li>
     </ul>
     <h4>4) Lainnya</h4>
