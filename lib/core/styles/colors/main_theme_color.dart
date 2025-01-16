@@ -19,7 +19,7 @@ class MainThemeColor implements ThemeColor {
   Color get primaryFixed => primaryContainer; // Variasi tetap dari primary untuk konsistensi di area tertentu
 
   @override
-  Color get primaryFixedDim => primaryContainer.withValues(alpha: 0.8); // Versi redup dari primaryFixed
+  Color get primaryFixedDim => const Color(0xFF001E2D); // Versi redup dari primaryFixed
 
   @override
   Color get inversePrimary => white; // Warna kontras dengan primary (biasanya terang)
@@ -127,7 +127,7 @@ class MainThemeColor implements ThemeColor {
 
   // ========= Background and neutral colors
   @override
-  Color get lightGrey => const Color(0xFFBBBBBB); // Warna abu-abu terang untuk elemen netral
+  Color get lightGrey => const Color(0xFFEDEDED); // Warna abu-abu terang untuk elemen netral
 
   @override
   Color get grey => const Color(0xFF1F1F1F); // Warna abu-abu gelap untuk elemen netral
