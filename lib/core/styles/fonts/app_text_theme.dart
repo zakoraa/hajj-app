@@ -8,22 +8,22 @@ class AppTextTheme {
   static TextTheme main(BuildContext context) =>
       ThemeData.light().textTheme.copyWith(
             // headlineSmall: Biasanya digunakan untuk heading kecil, seperti subjudul atau bagian dalam kartu kecil.
-            headlineSmall: AppFont.text14(context),
+            headlineSmall: AppFont.text14(context).semiBold,
 
             // headlineMedium: Digunakan untuk heading dengan ukuran sedang, seperti judul di halaman kecil.
-            headlineMedium: AppFont.text16(context),
+            headlineMedium: AppFont.text16(context).semiBold,
 
             // headlineLarge: Untuk heading besar, biasanya digunakan untuk judul utama di halaman atau bagian besar.
-            headlineLarge: AppFont.text24(context),
+            headlineLarge: AppFont.text24(context).semiBold,
 
             // titleSmall: Digunakan untuk teks judul kecil, seperti bagian deskripsi singkat atau label item kecil.
-            titleSmall: AppFont.text12(context),
+            titleSmall: AppFont.text12(context).bold,
 
             // titleMedium: Digunakan untuk judul dengan ukuran sedang, misalnya nama elemen atau menu utama.
-            titleMedium: AppFont.text14(context),
+            titleMedium: AppFont.text14(context).bold,
 
             // titleLarge: Untuk judul besar, seperti heading utama atau nama produk/halaman penting.
-            titleLarge: AppFont.text18(context),
+            titleLarge: AppFont.text18(context).bold,
 
             // bodySmall: Untuk teks body kecil, biasanya digunakan untuk catatan atau teks tambahan.
             bodySmall: AppFont.text10(context),
@@ -35,22 +35,22 @@ class AppTextTheme {
             bodyLarge: AppFont.text14(context),
 
             // displayLarge: Biasanya digunakan untuk teks tampilan besar, seperti angka besar atau heading yang sangat menonjol.
-            displayLarge: AppFont.text32(context),
+            displayLarge: AppFont.text32(context).semiBold,
 
             // displayMedium: Digunakan untuk teks tampilan sedang, bisa untuk heading sekunder yang cukup besar.
-            displayMedium: AppFont.text28(context),
+            displayMedium: AppFont.text28(context).semiBold,
 
             // displaySmall: Untuk teks tampilan kecil, seperti subheading di halaman dengan desain besar.
-            displaySmall: AppFont.text24(context),
+            displaySmall: AppFont.text24(context).semiBold,
 
             // labelLarge: Biasanya digunakan untuk label tombol besar atau label yang menonjol.
-            labelLarge: AppFont.text14(context),
+            labelLarge: AppFont.text14(context).semiBold,
 
             // labelMedium: Digunakan untuk label standar, seperti label tombol dengan ukuran default.
-            labelMedium: AppFont.text12(context),
+            labelMedium: AppFont.text12(context).semiBold,
 
             // labelSmall: Untuk label kecil, misalnya teks kecil di bawah elemen interaktif.
-            labelSmall: AppFont.text10(context),
+            labelSmall: AppFont.text10(context).semiBold,
           );
 
   // TODO: menginisialisasi class tema text

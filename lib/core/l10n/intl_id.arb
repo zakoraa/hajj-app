@@ -7,6 +7,9 @@
 
   "login": "Masuk",
 
+  "announcement": "Pengumuman",
+  "group": "Grup",
+
   "mustNotBeEmpty" : "{field} tidak boleh kosong",
   "atLeastLengthCharacters" : "{field} minimal {length} karakter",
   "invalidFormat" : "Format {field} tidak valid",
