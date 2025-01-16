@@ -35,14 +35,18 @@
         Contoh: <br/>
         <code>Text(
   ...
-  style: AppFont.text16(context),
+  style: AppFont.titleMedium(context),
 )</code>
         <p>Bisa juga atur warna dan ketebalan</p>
            <code>Text(
   ...
-  style: AppFont.text16(context).red.bold,
+  style: AppFont.titleMedium(context)?.red.bold,
 )</code>
  <p>atau custom style</p>
+          <code>Text(
+  ...
+  style: AppFont.titleMedium(context)?.copyWith(color: Colors.red, fontWeight: FontWeight.w600),
+)</code>
            <code>Text(
   ...
   style: AppFont.text16.copyWith(color: Colors.red, fontWeight: FontWeight.w600),
