@@ -10,6 +10,33 @@ class AppFont {
 
   static const double _scale = 1.0;
 
+  static TextTheme theme(BuildContext context) => Theme.of(context).textTheme;
+  
+  // Title styles
+  static TextStyle? titleSmall(BuildContext context) => theme(context).titleSmall;
+  static TextStyle? titleMedium(BuildContext context) => theme(context).titleMedium;
+  static TextStyle? titleLarge(BuildContext context) => theme(context).titleLarge;
+
+  // Body styles
+  static TextStyle? bodySmall(BuildContext context) => theme(context).bodySmall;
+  static TextStyle? bodyMedium(BuildContext context) => theme(context).bodyMedium;
+  static TextStyle? bodyLarge(BuildContext context) => theme(context).bodyLarge;
+
+  // Headline styles
+  static TextStyle? headlineSmall(BuildContext context) => theme(context).headlineSmall;
+  static TextStyle? headlineMedium(BuildContext context) => theme(context).headlineMedium;
+  static TextStyle? headlineLarge(BuildContext context) => theme(context).headlineLarge;
+
+  // Display styles
+  static TextStyle? displaySmall(BuildContext context) => theme(context).displaySmall;
+  static TextStyle? displayMedium(BuildContext context) => theme(context).displayMedium;
+  static TextStyle? displayLarge(BuildContext context) => theme(context).displayLarge;
+
+  // Label styles
+  static TextStyle? labelSmall(BuildContext context) => theme(context).labelSmall;
+  static TextStyle? labelMedium(BuildContext context) => theme(context).labelMedium;
+  static TextStyle? labelLarge(BuildContext context) => theme(context).labelLarge;
+
   static TextStyle baseText(BuildContext context) => TextStyle(
         fontFamily: "Poppins",
         color: AppColor.textColor(context),
@@ -63,6 +90,8 @@ class AppFont {
       baseText(context).copyWith(fontSize: 29.sp * _scale);
   static TextStyle text30(BuildContext context) =>
       baseText(context).copyWith(fontSize: 30.sp * _scale);
+  static TextStyle text32(BuildContext context) =>
+      baseText(context).copyWith(fontSize: 32.sp * _scale);
   static TextStyle text38(BuildContext context) =>
       baseText(context).copyWith(fontSize: 38.sp * _scale);
   static TextStyle text40(BuildContext context) =>
@@ -72,7 +101,6 @@ class AppFont {
   static TextStyle text60(BuildContext context) =>
       baseText(context).copyWith(fontSize: 60.sp * _scale);
 
-  static TextStyle button(BuildContext context) => text14(context);
 }
 
 extension TextStyleWeightExtension on TextStyle {

@@ -9,4 +9,5 @@ class IconAssetConstant {
   static const String call = "${basePath}call.svg";
   static const String chat = "${basePath}chat.svg";
   static const String profile = "${basePath}profile.svg";
+  static const String readStatus = "${basePath}read-status.svg";
 }

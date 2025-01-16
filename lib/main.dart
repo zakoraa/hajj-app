@@ -8,6 +8,8 @@ import 'ui/my_app.dart';
 
 export 'package:flutter_gen/gen_l10n/app_localization.dart';
 
+// dart run build_runner watch -d build --delete-conflicting-outputs
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(

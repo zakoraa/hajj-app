@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hajj_umrah_accessories/core/constants/assets/icon_asset_constant.dart';
 import 'package:hajj_umrah_accessories/core/constants/common/size_constant.dart';
 import 'package:hajj_umrah_accessories/core/styles/colors/app_color.dart';
+import 'package:hajj_umrah_accessories/core/styles/fonts/app_font.dart';
 
 import '../../../../core/utils/lang.dart';
 import '../../../common/common/widgets/svg_asset.dart';
@@ -45,18 +46,34 @@ class _BottomNavbarState extends ConsumerState<BottomNavbar> {
     final selectedTabIndex = ref.watch(bottomNavbarViewModelProvider);
     final viewModel = ref.read(bottomNavbarViewModelProvider.notifier);
     final item = bottomNavbarList.elementAt(index);
+    final isSelectedIndex = selectedTabIndex == index;
     return GestureDetector(
       onTap: () => viewModel.selectTab(index),
       child: Container(
         height: SizeConstant.bottomNavbarHeight,
         width: 1.sw / 3,
         color: AppColor.backgroundApp(context),
-        child: SvgAsset(
-          asset: item.values.first,
-          margin: 15,
-          color: selectedTabIndex == index
-              ? AppColor.primary(context)
-              : AppColor.disableTextOrIcon(context),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgAsset(
+              asset: item.values.first,
+              color: isSelectedIndex
+                  ? AppColor.primaryDarker(context)
+                  : AppColor.disableTextOrIcon(context),
+            ),
+            Text(
+              item.keys.first,
+              style: AppFont.text10(context).copyWith(
+                fontWeight:
+                    isSelectedIndex ? FontWeight.w700 : FontWeight.normal,
+                color: isSelectedIndex
+                    ? AppColor.primaryDarker(context)
+                    : AppColor.disableTextOrIcon(context),
+              ),
+            )
+          ],
         ),
       ),
     );

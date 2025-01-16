@@ -1,5 +1,5 @@
 class SizeConstant {
   const SizeConstant._();
 
-  static const double bottomNavbarHeight = 50;
+  static const double bottomNavbarHeight = 65;
 }
