@@ -20,10 +20,10 @@
     </ul>
   </li>
 </ul>
-    <h4>2) Dependency Injection</h4>
-    <p>Fungsi: untuk automatisasi kode dependency injection (lebih detail: <a href="https://pub.dev/packages/injectable">dokumentasi</a>)</p>
-    <p>Jika ingin menggunakan dependency injection pada sebuah kelas, jalankan perintah ini terlebih dahulu di terminal:</p>
-    <code>dart run build_runner watch</code>
+    <h4>2) Build Runner <strong>(*Sangat disarankan untuk dilakukan sebelum memulai koding)</strong></h4>
+    <p>Fungsi: untuk generate kode secara otomatis dengan menambahkan anotasi ke beberapa class seperti class viewModel, Model, dll. seperti pada anotasi untuk Dependecy Injection (<a href="https://pub.dev/packages/injectable_generator">dokumentasi</a>), anotasi freezed pada model (<a href="https://pub.dev/packages/freezed">dokumentasi</a>), dan anotasi pada viewModel (<a href="https://riverpod.dev/docs/introduction/getting_started">dokumentasi</a>)</p>
+    <p>Jalankan perintah ini di terminal:</p>
+    <code>dart run build_runner watch -d build --delete-conflicting-outputs</code>
     <h4>3) Daftar atribut widget yang dipanggil secara konstan</h4>
     <p>*usahakan atribut widget seperti text, style text, dan warna diambil dari class konstan yang sudah diatur.</p>
     <ul>
@@ -35,19 +35,19 @@
         Contoh: <br/>
         <code>Text(
   ...
-  style: AppFont.text16,
+  style: AppFont.text16(context),
 )</code>
         <p>Bisa juga atur warna dan ketebalan</p>
            <code>Text(
   ...
-  style: AppFont.text16.red.bold,
+  style: AppFont.text16(context).red.bold,
 )</code>
       </li>
       <li><strong>Warna</strong>: diambil dari file core/styles/colors/app_color.dart.<br/>
       Contoh:<br/>
         <code>
           Container(
-    color: AppColor.main.primary,
+    color: AppColor.primary(context),
 ),
         </code>
       </li>
