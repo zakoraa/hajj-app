@@ -46,7 +46,7 @@
           <code>Text(
   ...
   style: AppFont.titleMedium(context)?.copyWith(color: Colors.red, fontWeight: FontWeight.w600),
-)</code>
+)</code><br/>
            <code>Text(
   ...
   style: AppFont.text16.copyWith(color: Colors.red, fontWeight: FontWeight.w600),
